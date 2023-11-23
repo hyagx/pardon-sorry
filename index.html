@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Perdoa?</title>
+</head>
+
+
+
+<body style="
+
+font-family:Verdana;
+">
+
+    <div id="conteudo">
+        <h2>Me Perdoa?</h2>
+    <button class="btn" onclick="sim()" style="
+    background:black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;">SIM</button>
+    <button id='btn' onmouseover="desvia()" style="
+    background:black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;">NÃO</button>
+
+    </div>
+</body>
+
+<style>
+    #conteudo {
+        background: #ff7a7a;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+</style>
+
+<script>
+    function sim(){
+        alert("Você me perdoou, hoje tem cuzinho! Brincadeira, eu te amo :)")
+    }
+
+    function desvia(){
+        var btn = document.getElementById("btn");
+        console.log(btn);
+        btn.style.position = 'absolute';
+        btn.style.top = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log("Opa, tá errado isso aí...");
+    }
+
+    randomNumber(0, 100);
+    
+    function geraPosicao(min, max) {
+  return (Math.random() * (max - min) + min) + '%';
+}
+
+    
+
+</script>
+
+</html>
